@@ -1,0 +1,13 @@
+/* 
+    Created on : 3/11/2015, 01:45:04 AM
+    Author     : Mario Lujan
+*/
+
+.tags-list .tag {
+     cursor: pointer;
+     padding: 1px 4px;
+}
+.crudField .tags-list .selected {
+     background: #222;
+     color: #fff;
+}

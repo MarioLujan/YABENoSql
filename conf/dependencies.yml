@@ -1,0 +1,10 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> crud
+    # Import the secure module
+    - secure
+    # Import the cobertura module in application
+    - play -> cobertura 2.4
+    - play -> morphia 1.2.12

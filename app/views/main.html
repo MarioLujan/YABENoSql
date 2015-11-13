@@ -1,0 +1,68 @@
+<!DOCTYPE html >
+<html>
+    
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Bienvenido a YABE</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Inicio</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Lista Posts <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="@{Posts.show}">Page 1-1</a></li>
+            <li><a href="@{Posts.show}">Page 1-2</a></li>
+            <li><a href="@{Posts.show}">Page 1-3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+    <head>
+        <title>#{get 'title' /}</title>		
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" media="screen" 
+            href="@{'/public/stylesheets/main.css'}" />
+        <link rel="shortcut icon" type="image/png" 
+            href="@{'/public/images/favicon.png'}" />
+        <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}"></script>
+        <script src="@{'/public/javascripts/jquery.tools-1.2.5.toolbox.expose.min.js'}"></script>
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+        
+        <div id="header">
+            <div id="logo">
+                yabe.
+            </div>
+            <ul id="tools"> 
+                <li> 
+                    <a href="@{Admin.index()}">&{'views.main.tools.login'}</a>  
+                </li> 
+            </ul> 
+            <div id="title">
+                <span class="about">About this blog</span>
+                <h1><a href="@{Application.index()}">${blogTitle}</a></h1>
+                <h2>${blogBaseline}</h2>
+            </div>
+        </div>
+        
+        <div id="main">
+            #{doLayout /} 
+        </div>
+        
+        <p id="footer">
+            Yabe is a (not that) powerful blog engine built with the 
+            <a href="https://www.playframework.com">Play framework</a>
+            as a tutorial application.
+        </p>
+        
+    </body>
+</html>
